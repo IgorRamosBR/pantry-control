@@ -6,7 +6,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
 import ShoppingListsScreen from './src/screens/ShoppingListsScreen'
-import ProductsScreen from "./src/screens/ProductsScreen";
+import PantryScreen from "././src/screens/PantryScreen"
 
 export default class App extends React.Component {
 
@@ -53,12 +53,12 @@ const ShoppingListsStack = createStackNavigator(
   }
 )
 
-const ProductsStack = createStackNavigator(
+const PantryStack = createStackNavigator(
   {
-    Products: { 
-      screen: ProductsScreen,
+    Pantry: { 
+      screen: PantryScreen,
       navigationOptions:{
-        headerTitle : 'Produtos',
+        headerTitle : 'Dispensa',
       } 
     }
   },
@@ -80,10 +80,10 @@ const TabStack = createBottomTabNavigator(
         tabBarLabel: 'Lista de Compras',
       },
     },
-    Products: {
-      screen: ProductsStack,
+    Pantry: {
+      screen: PantryStack,
       navigationOptions: {
-        tabBarLabel: 'Produtos',
+        tabBarLabel: 'Dispensa',
       },
     }
   },
@@ -120,7 +120,7 @@ const getTabBarIcon = (navigation, focused, tintColor) => {
   let iconName;
   if (routeName === 'ShoppingLists') {
     iconName = 'format-list-bulleted';
-  } else if (routeName === 'Products') {
+  } else if (routeName === 'Pantry') {
     iconName = 'food-fork-drink';
   }
 
