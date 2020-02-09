@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
-
+import { TouchableOpacity } from 'react-native'
 export default class PantryScreen extends React.Component {
 
   constructor(props) {
@@ -77,8 +77,8 @@ export default class PantryScreen extends React.Component {
                             <Text note numberOfLines={1}>{product.brand}</Text>
                           </Body>
                           <Right>
-                            <Icon name='add' style={{fontSize: 22, color: 'black'}}/>
-                            <Icon name='remove' style={{fontSize: 22, color: 'black'}}/>
+                            <TouchableOpacity onPress={() => console.log('plus')}><Icon name='add' style={{fontSize: 22, color: 'black'}}/></TouchableOpacity>
+                            <TouchableOpacity onPress={() => console.log('minus')}><Icon name='remove' style={{fontSize: 22, color: 'black'}}/></TouchableOpacity>
                           </Right>
                         </ListItem>
                       </List>
