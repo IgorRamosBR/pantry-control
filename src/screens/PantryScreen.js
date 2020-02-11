@@ -1,7 +1,9 @@
 import React from 'react';
-import { Container, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Button, Icon } from 'native-base';
+import { Container, Content, List, ListItem, Thumbnail, Text, Left, Body, Right, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { TouchableOpacity } from 'react-native'
+import FAB from 'react-native-fab'
+
 export default class PantryScreen extends React.Component {
 
   constructor(props) {
@@ -88,8 +90,8 @@ export default class PantryScreen extends React.Component {
                 </List>
               );
             })}
-            
         </Content>
+        <FAB buttonColor="#4A148C" iconTextColor="#FFFFFF" onClickAction={() => {console.log("FAB pressed")}} visible={true} iconTextComponent={<Icon name="add"/>} />
       </Container>
     );
   }
