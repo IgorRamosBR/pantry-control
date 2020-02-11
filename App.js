@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createStackNavigator } from 'react-navigation-stack';
 import ShoppingListsScreen from './src/screens/ShoppingListsScreen'
 import PantryScreen from "././src/screens/PantryScreen"
+import NewProductScreen from "././src/screens/NewProductScreen"
 
 export default class App extends React.Component {
 
@@ -59,6 +60,12 @@ const PantryStack = createStackNavigator(
       screen: PantryScreen,
       navigationOptions:{
         headerTitle : 'Dispensa',
+      } 
+    },
+    NewProduct: {
+      screen: NewProductScreen,
+      navigationOptions:{
+        headerTitle : 'Salvar Produto',
       } 
     }
   },

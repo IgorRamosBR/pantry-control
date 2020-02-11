@@ -3,6 +3,7 @@ import { Container, Content, List, ListItem, Thumbnail, Text, Left, Body, Right,
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { TouchableOpacity } from 'react-native'
 import FAB from 'react-native-fab'
+import { StackNavigator } from 'react-navigation';
 
 export default class PantryScreen extends React.Component {
 
@@ -91,7 +92,7 @@ export default class PantryScreen extends React.Component {
               );
             })}
         </Content>
-        <FAB buttonColor="#4A148C" iconTextColor="#FFFFFF" onClickAction={() => {console.log("FAB pressed")}} visible={true} iconTextComponent={<Icon name="add"/>} />
+        <FAB buttonColor="#4A148C" iconTextColor="#FFFFFF" onClickAction={() => {this.props.navigation.navigate('NewProduct')}} visible={true} iconTextComponent={<Icon name="add"/>} />
       </Container>
     );
   }
