@@ -3,7 +3,9 @@ import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 import { Dimensions } from 'react-native';
 
-export default class ShoppingListsScreen extends React.Component {
+import { CustomHeaderButton } from '../components';
+
+export default class PurchaseHistory extends React.Component {
 
   constructor(props) {
     super(props);
@@ -82,4 +84,12 @@ export default class ShoppingListsScreen extends React.Component {
     );
   }
 }
-const deviceWidth = Dimensions.get('window').width;
+
+PurchaseHistory.navigationOptions = (navigateData) => {
+  return {
+    headerLeft: () => (
+     <CustomHeaderButton icon={"md-menu"} onPress={() => navigateData.navigation.toggleDrawer()}/>
+    )
+  };
+};
+
