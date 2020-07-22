@@ -3,7 +3,8 @@ import { Container, Content, List, ListItem, Thumbnail, Text, Left, Body, Right,
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { TouchableOpacity } from 'react-native'
 import FAB from 'react-native-fab'
-import { StackNavigator } from 'react-navigation';
+
+import { CustomHeaderButton } from '../components';
 
 export default class PantryScreen extends React.Component {
 
@@ -97,3 +98,11 @@ export default class PantryScreen extends React.Component {
     );
   }
 } 
+
+PantryScreen.navigationOptions = (navigateData) => {
+  return {
+    headerLeft: () => (
+     <CustomHeaderButton icon={"md-menu"} onPress={() => navigateData.navigation.toggleDrawer()}/>
+    )
+  };
+};
