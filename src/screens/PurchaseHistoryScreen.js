@@ -5,7 +5,7 @@ import { Dimensions } from 'react-native';
 
 import { CustomHeaderButton } from '../components';
 
-export default class PurchaseHistory extends React.Component {
+export default class PurchaseHistoryScreen extends React.Component {
 
   constructor(props) {
     super(props);
@@ -85,7 +85,7 @@ export default class PurchaseHistory extends React.Component {
   }
 }
 
-PurchaseHistory.navigationOptions = (navigateData) => {
+PurchaseHistoryScreen.navigationOptions = (navigateData) => {
   return {
     headerLeft: () => (
      <CustomHeaderButton icon={"md-menu"} onPress={() => navigateData.navigation.toggleDrawer()}/>
