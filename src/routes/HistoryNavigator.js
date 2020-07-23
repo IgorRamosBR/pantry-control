@@ -1,19 +1,13 @@
 import { createStackNavigator } from "react-navigation-stack";
-import { PantryScreen, NewProductScreen } from "../screens";
+import { PurchaseHistoryScreen } from "../screens";
 import DefaultColors from "../constants/DefaultColors";
 
 export default createStackNavigator(
   {
-    Pantry: {
-      screen: PantryScreen,
+    PurchaseHistory: {
+      screen: PurchaseHistoryScreen,
       navigationOptions: {
-        headerTitle: "Despensa",
-      },
-    },
-    NewProduct: {
-      screen: NewProductScreen,
-      navigationOptions: {
-        headerTitle: "Salvar Produto",
+        headerTitle: "Histórico de Compras",
       },
     },
   },

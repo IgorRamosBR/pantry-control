@@ -1,16 +1,22 @@
 import { createStackNavigator } from "react-navigation-stack";
 
-import { PurchaseHistory } from "../screens";
+import { ShoppingListScreen, NewProductScreen } from "../screens";
 import DefaultColors from "../constants/DefaultColors";
 
 export default createStackNavigator(
   {
-    PurchaseHistory: {
-      screen: PurchaseHistory,
+    ShoppingList: {
+      screen: ShoppingListScreen,
       navigationOptions: {
-        headerTitle: "Histórico de Compras",
+        headerTitle: "Lista de Compras",
       },
     },
+    NewProduct: {
+      screen: NewProductScreen,
+      navigationOptions :{
+        headerTitle: "Adicionar Produto"
+      }
+    }
   },
   {
     defaultNavigationOptions: {
